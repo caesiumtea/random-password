@@ -46,7 +46,7 @@ _Bonus challenge: avoid using any Python modules or packages._ This means writin
 
 ### generate_password()
 - [x] get user input to ask how long the password should be
-    - validating that the input is an int between 8 and 64
+    - [x] validating that the input is an int between 8 and 64
 - [x] while (has_digit==False or has_upper==False or has_lower==False or has_symbol==False)
     - [x] set pass="", has_ to false
     - [x] loop as many times as length of password requested

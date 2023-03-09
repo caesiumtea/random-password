@@ -1,7 +1,9 @@
 import random
 
 def generate_password():
-    goal_len = int(input("Password length:"))
+    goal_len = 0
+    while goal_len < 8 or goal_len > 64:
+        goal_len = int(input("Enter a password length between 8 and 64:"))
     chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*-_+=<>?"
     chars_len = len(chars)
     has_lower = False
