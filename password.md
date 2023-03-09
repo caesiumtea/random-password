@@ -45,26 +45,28 @@ _Bonus challenge: avoid using any Python modules or packages._ This means writin
 ### functions
 
 ### generate_password()
-- get user input to ask how long the password should be
+- [x] get user input to ask how long the password should be
     - validating that the input is an int between 8 and 64
-- while (has_digit==False or has_upper==False or has_lower==False or has_symbol==False)
-    - set pass="", has_ to false
-    - loop as many times as length of password requested
-        - loop condition: is `pass` at least as long as the length requested?
-        - randomly pick a character from the set of (uppercase letters, lowercase letters, symbols, numbers)
-            - pick a random number between 0 and length of concat string
-            - chr(number) to convert it to ASCII character
-            - increment `attempts`
-        - add that char to `pass` - `pass + num`
-        - check its type and set relevant variable to true
-            - isdigit, islower, isupper 
-            - if all 3 are false then it must be a symbol, so set has_symbol true
+- [x] while (has_digit==False or has_upper==False or has_lower==False or has_symbol==False)
+    - [x] set pass="", has_ to false
+    - [x] loop as many times as length of password requested
+        - [x] loop condition: is `pass` at least as long as the length requested?
+        - [x] randomly pick a character from the set of (uppercase letters, lowercase letters, symbols, numbers)
+            - [x] pick a random number between 0 and length of concat string
+            - [x] char = chars[random number]
+            - ~~chr(number) to convert it to ASCII character~~
+        - increment `attempts`
+        - [x] add that char to `pass` - `pass + num`
+        - [x] check its type and set relevant variable to true
+            - [x] isdigit, islower, isupper 
+            - [x] if all 3 are false then it must be a symbol, so set has_symbol true
 - if we're out of the loop, then it has everything needed, so return pass! (print pass)
+ - is there anything we can do to check for/prevent infinite loops? e.g. if we asked for a password shorter than 4 rn it would probably loop forver because it can never fulfill all requirements so it will jsut keep trying
 
 
 
 ### helper function: get_random()
-- for first draft, this will just be a wrapper around the python random module
+- [x] for first draft, this will just be a wrapper around the python random module
 - params: keysmash, i,
           lower_bound, upper_bound - both inclusive, because that's how random.randint() works
           - if you wanted to be extra rigorous you could check that the bounds are in the right order, but here it's unneeded because lower is always gonna be 0
