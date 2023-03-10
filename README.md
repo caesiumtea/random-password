@@ -42,6 +42,8 @@ The idea to choose a pseudo-random result based on text input by the user comes 
 
 ## Known issues
 - The program will produce an error if the user enters a non-integer when asked for password length
+- Entering the same text results in the same password every time
+- Unclear if this algorithm can truly be considered pseudo-random 
 - I haven't tested how the get_random helper function will behave if it's given an upper bound that's smaller than the lower bound, and there's currently no validation for this. This shouldn't ever be an issue when using the program as it's currently written, since the bounds are basically hard-coded into the one get_random call, but it could cause problems later if another get_random call was added, especially if it had input-based bounds.
 
 ## Note to Codedex challenge admin
